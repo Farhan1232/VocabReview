@@ -1,0 +1,19 @@
+{
+  // React Compiler rules (refs, purity, set-state-in-effect, incompatible-library) are off: this project does not
+  // use the compiler, and these patterns are deliberate and covered by tests.
+  "plugins": ["typescript", "react", "unicorn", "import"],
+  "categories": { "correctness": "error" },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "error",
+    "react/refs": "off",
+    "react/purity": "off",
+    "react/set-state-in-effect": "off",
+    "react/incompatible-library": "off",
+    "no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_" }
+    ]
+  },
+  "ignorePatterns": ["dist", "dist-demo"]
+}
